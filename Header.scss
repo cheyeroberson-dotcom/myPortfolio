@@ -1,0 +1,813 @@
+.header {
+    grid-column: content-start 2 / content-start  13;
+    height: 10%;
+    width: 100%;
+    background-color: #fff;
+    position: fixed;
+    top: -.2rem;
+    z-index: 700;
+    transition: all .25s linear; 
+    -o-transition: all .25s linear; 
+    -moz-transition: all .25s linear; 
+    -webkit-transition: all .25s linear;
+    
+
+
+    display: grid;
+    grid-template-columns: repeat(11, [header-start] 1fr[header-end]);
+    grid-template-rows: 5rem repeat(2, 1fr);
+
+    // &.active {
+    //     opacity: .8;
+    //     transition: all .25s linear; 
+    //     -o-transition: all .25s linear; 
+    //     -moz-transition: all .25s linear; 
+    //     -webkit-transition: all .25s linear;
+    // }
+
+    &__name {
+        transition: all .25s linear; 
+        -o-transition: all .25s linear; 
+        -moz-transition: all .25s linear; 
+        -webkit-transition: all .25s linear;
+    
+        &--link {
+            grid-row: 1;
+            grid-column: 2 / 4;
+            align-self: center;
+            justify-self: center;
+            margin-left: 2rem;
+            position: relative;
+            font-size: 2.8rem;
+            text-decoration: none;
+            color: #000;
+            cursor: pointer;
+            transition: all .25s linear; 
+            -o-transition: all .25s linear; 
+            -moz-transition: all .25s linear; 
+            -webkit-transition: all .25s linear;
+
+            &::before {
+                content: '';
+                height: 11rem;
+                width: .6rem;
+                background-color: #000;
+                position: absolute;
+                left: -3.5rem;
+                opacity: 0;
+                animation: fade-in 1s ease forwards;
+            }
+
+            &::after {
+                content: '';
+                height: .35rem;
+                width: 14rem;
+                background-color: #2C9EDE;
+                position: absolute;
+                left: -1.4rem;
+                bottom: -1rem;
+                opacity: 0;
+                animation: title-from-left 1s ease forwards;
+            }
+        }
+    }
+
+    &__title {
+        transition: all .25s linear; 
+        -o-transition: all .25s linear; 
+        -moz-transition: all .25s linear; 
+        -webkit-transition: all .25s linear;
+
+        &--link {
+            grid-row: 2;
+            grid-column: 2 / 5;
+            align-self: start;
+            justify-self: center;
+            margin-top: -.8rem;
+            margin-left: 5.8rem;
+            text-transform: uppercase;
+            font-size: 5.8rem;
+            text-decoration: none;
+            color: #000;
+            cursor: pointer;
+            transition: all .25s linear; 
+            -o-transition: all .25s linear; 
+            -moz-transition: all .25s linear; 
+            -webkit-transition: all .25s linear; 
+        }
+    }
+
+    &__nav-item {
+        text-decoration: none;
+        color: #000;
+        font-weight: 600;
+        font-size: 2.4rem;
+        transition: all .25s linear; 
+        -o-transition: all .25s linear; 
+        -moz-transition: all .25s linear; 
+        -webkit-transition: all .25s linear;
+
+        &--1 {
+            grid-row: 1 / 3;
+            grid-column: 6;
+            justify-self: end;
+            align-self: center;
+            cursor: pointer;
+        }
+
+        &--2 {
+            grid-row: 1 / 3;
+            grid-column: 7;
+            justify-self: end;
+            align-self: center;
+            cursor: pointer;
+        }
+
+        &--3 {
+            grid-row: 1 / 3;
+            grid-column: 8;
+            justify-self: end;
+            align-self: center;
+            cursor: pointer;
+        }
+    }
+
+    &__nav-logo--1 {
+        grid-row: 1 / 3;
+        grid-column: 9;
+        justify-self: end;
+        align-self: center;
+        margin-bottom: -1.2rem;
+        transition: all .25s linear; 
+        -o-transition: all .25s linear; 
+        -moz-transition: all .25s linear; 
+        -webkit-transition: all .25s linear;
+    }
+
+    &__nav-logo--2 {
+        grid-row: 1 / 3;
+        grid-column: 10;
+        justify-self: end;
+        align-self: center;
+        transition: all .25s linear; 
+        -o-transition: all .25s linear; 
+        -moz-transition: all .25s linear; 
+        -webkit-transition: all .25s linear;
+    }
+
+    &__img--1 {
+        transition: all .25s linear; 
+        -o-transition: all .25s linear; 
+        -moz-transition: all .25s linear; 
+        -webkit-transition: all .25s linear;
+    }
+
+    &__img--2 {
+        width: 8.8rem;
+        transition: all .25s linear; 
+        -o-transition: all .25s linear; 
+        -moz-transition: all .25s linear; 
+        -webkit-transition: all .25s linear;
+    }
+
+    .hamburger-menu {
+        grid-row: 2 / 3;
+        grid-column: 10;
+        justify-self: end;
+        align-self: center;
+        padding-bottom: 1.7rem;
+        margin-top: -1.8rem;
+        width: 4rem;
+        cursor: pointer;
+    }
+
+    .close-hamburger {
+        grid-row: 2 / 3;
+        grid-column: 10;
+        justify-self: end;
+        align-self: center;
+        padding-bottom: 1.7rem;
+        margin-top: -1.8rem;
+        width: 4rem;
+        cursor: pointer;
+    }
+}
+
+////////////////////////////////////////////////////
+////////////////// MEDIA QUERIES //////////////////
+//////////////////////////////////////////////////
+
+
+
+////////////// 1650px //////////////
+
+@media screen and (max-width: 1650px){
+    .header__title {
+        font-size: 5.4rem;
+    }
+    
+    .header__nav-logo--1 {
+        margin-right: -1rem;
+        margin-bottom: -1.2rem;
+    }
+
+    .header__nav-logo--2 {
+        margin-bottom: -.2rem;
+    }
+
+    .header__img--1 {
+        width: 9rem;
+    }
+
+    .header__img--2 {
+        width: 8rem;
+    }
+
+    .header__img--1--small {
+        width: 5.4rem;
+    }
+
+    .header__img--2--small {
+        width: 5.5rem;
+    }
+
+    .header__nav-item {
+
+        font-size: 2rem;
+
+    }
+
+    .header__name--link {
+        &::before {
+            height: 10rem;
+            left: -3.1rem;
+        }
+
+        &::after {
+            width: 13rem;
+            left: -1.1rem;
+            bottom: -.7rem;
+        }
+    }
+}
+
+
+////////////// 1335px //////////////
+
+@media screen and (max-width: 1335px){
+    .header__nav-logo--1 {
+        justify-self: start;
+    }
+   
+    .header__nav-logo--2 {
+        justify-self: start;
+    }
+
+    .header__nav-item {
+
+        &--1 {    
+            justify-self: center;
+        }
+
+        &--2 {   
+            justify-self: center;
+        }
+
+        &--3 {   
+            justify-self: center;
+        }
+    }
+
+}
+
+
+////////////// 1220px //////////////
+
+@media screen and (max-width: 1220px){
+
+    .header__title {
+        font-size: 4.8rem;
+    }
+    .header__name {
+        font-size: 2.2rem;
+
+        &--link {
+            &::before {
+                height: 9rem;
+                width: .5rem;
+                left: -2.8rem;
+            }
+    
+            &::after {
+                width: 11.5rem;
+                height: .3rem;
+                left: -1.1rem;
+                bottom: -.7rem;
+            }
+        }
+    }
+
+    .header__nav-logo--1 {
+        grid-column: 10;
+        justify-self: start;
+        margin-left: .5rem;
+        margin-bottom: -.8rem;
+    }
+
+    .header__nav-logo--2 {
+        margin-bottom: -.8rem;
+        margin-right: -.6rem;
+        justify-self: end;
+    }
+
+    .header__nav-item {
+
+        &--1 {
+            grid-column: 7;
+        }
+
+        &--2 {
+            grid-column: 8;
+        }
+
+        &--3 {
+            grid-column: 9;
+        }
+    }
+}
+
+
+////////////// 1115px //////////////
+
+@media screen and (max-width: 1115px){
+    .header {
+        height: 11%;
+    }
+    
+    .header__title {
+        font-size: 4.2rem;
+
+        &--link {
+            margin-top: 0rem;
+        }
+    }
+    .header__name {
+        font-size: 1.7rem;
+
+        &--link {
+            margin-left: 0rem;
+            align-self: end;
+
+            &::before {
+                height: 7.5rem;
+                width: .4rem;
+                left: -2.6rem;
+            }
+    
+            &::after {
+                width: 10rem;
+                height: .25rem;
+            }
+        }
+    }
+
+    .header__nav-item {
+        font-size: 1.9rem;
+    }
+
+    .header__nav-logo--1 {
+        margin-left: -.4rem;
+    }
+
+    .header__nav-logo--2 {
+        margin-right: -1rem;
+    }
+
+    .header__nav-item {
+
+        &--2 {
+            margin-left: -.4rem;
+        }
+    }
+
+}
+
+////////////// 750px //////////////
+
+@media screen and (max-width: 750px){
+    
+    .header__name--link::before {
+        top: -.5rem;
+    }
+   
+
+    .header__title {
+
+        &--link {
+            grid-column: 2 / 6;
+            margin-left: 2rem;
+        }
+
+    }
+
+
+}
+
+////////////// 650px //////////////
+
+@media screen and (max-width: 650px){
+
+    .header__name {
+        margin-top: -3rem;
+
+        &--link {
+            margin-bottom: -.6rem;
+        }
+    }
+
+    .header__name--link::before {
+        top: -3rem;
+    }
+
+    .header__name--link::after {
+        bottom: 0rem;
+    }
+
+    .header__title {
+        font-size: 3.8rem;
+
+        &--link {
+            margin-top: .3rem;
+        }
+    }
+
+}
+
+////////////// 500px //////////////
+
+@media screen and (max-width: 510px){
+
+    .header__name {
+        font-size: 1.6rem;
+    }
+
+    .header__title {
+        font-size: 3.5rem;
+    }
+
+    .header__name--link::before {
+        height: 7rem;
+        width: .29rem;
+    }
+
+    .header__name--link::after {
+        width: 8rem;
+        height: .24rem;
+        bottom: .3rem;
+    }
+
+
+}
+
+
+////////////// 420px //////////////
+
+@media screen and (max-width: 420px){
+    .header {
+        margin-top: 0rem;
+        height: 11%;
+    }
+
+    .header__title {
+        font-size: 3.2rem;
+    }
+
+    .header__name--link::before {
+        height: 6.5rem;
+        width: .29rem;
+    }
+
+    .header__name--link::after {
+        width: 7.8rem;
+    }
+
+    .header .hamburger-menu {
+        width: 3.8rem;
+        margin-top: -2.3rem;
+        padding-bottom: 2rem;
+    }
+
+}
+
+///////////////////////////////////////////////////
+//////////////////// DEVICES /////////////////////
+/////////////////////////////////////////////////
+
+
+//<<<<<<<<<<<<<<<<  PORTRAIT  >>>>>>>>>>>>>>>>
+
+
+    ///// iPad
+    // Portrait
+    @media screen and (max-height: 1024px) and (orientation: portrait) {
+
+        .header__title--link {
+            margin-left: 7.8rem;
+        }
+
+    }
+
+    ///// Galaxy S9/S9+
+    // Portrait
+    @media screen and (max-height: 740px) and (orientation: portrait) {
+
+        .header__name--link::before {
+            top: -4rem;
+        }
+
+        .header__name--link::after {
+            bottom: .5rem;
+        }
+
+        .header__title--link {
+            margin-top: -.5rem;
+            margin-left: 3.8rem;
+        }
+
+    }
+
+    ///// Nexus 5X & 6P (412 x 732)
+    // Portrait
+        @media screen and (max-height: 732px) and (orientation: portrait) {
+            .header__name--link::before {
+                top: -3.4rem;
+            }
+
+        }
+
+
+    ///// iPhone 6/7/8 
+    // Portrait
+    @media screen and (max-height: 667px) and (orientation: portrait) {
+        .header__name--link{
+            
+            margin-bottom: -.6rem;
+
+            &::before {
+                height: 5.8rem;
+                top: -4rem;
+            }
+
+            &::after {
+                bottom: .7rem;
+            }
+        }
+
+        .header__title {
+            margin-top: -.3rem;
+            font-size: 3rem;
+            &--link {
+                margin-left: 4.8rem;
+            }
+        }
+
+    }
+
+
+    //// Galaxy Note 3,
+    //// Galaxy S5, 
+    //// Microsoft Lumia 550/950
+    // Portrait
+    @media screen and (max-height: 640px) and (max-width: 360px) and (orientation: portrait) {
+
+        .header__name {
+            margin-top: -3.6rem;
+        }
+
+        .header__name--link {
+            margin-bottom: 0rem;
+
+            &::before {
+                top: -3.8rem;
+            }
+
+            &::after {
+                bottom: .9rem;
+            }
+        }
+
+        .header__title {
+            margin-top: -1.1rem;
+        }
+
+        .header__title--link {
+            margin-top: -.3rem;
+            margin-left: 2rem;
+        }
+    }
+
+
+    ///// iPhone 5/SE
+    // Portrait
+    @media screen and (max-height: 568px) and (orientation: portrait) {
+        .header {
+            margin-top: -.5rem;
+        }
+
+        .header__name--link::before {
+            height: 5.4rem;
+            top: -3rem;
+            left: -2rem;
+            width: .25rem;
+        }
+
+        .header__name {
+            margin-top: -2.8rem;
+        }
+
+        .header__name--link::after {
+            width: 7.6rem;
+            bottom: .4rem;
+        }
+
+        .header__title {
+            margin-top: -2.2rem;
+            font-size: 3rem;
+        }
+    }
+
+
+
+//<<<<<<<<<<<<<<<<  LANDSCAPE  >>>>>>>>>>>>>>>>
+
+
+// iPhone Pro Max (926 x 428)
+// One Plus Nord 9 Pro (919 x 412), One Plus Nord (915 x 412)
+@media screen and (max-height: 428px) and (orientation: landscape){
+    .header {
+        margin-top: 0rem;
+        height: 22%;
+    }
+
+    .header__name--link {
+        align-self: end;
+    }
+
+}
+
+
+///// Galaxy Note 9 (846 x 414),
+///// iPhone XR (896 x 414),
+///// iPhone XS Max (896 x 414)
+    @media screen and (max-height: 414px) and (orientation: landscape) {
+
+        .header {
+            margin-top: -1rem;
+            height: 23%;
+        }
+
+        .header__title {
+            font-size: 3.2rem;
+        }
+
+        .header__title--link {
+            margin-left: 2.5rem;
+        }
+
+        .header__name--link::before {
+            height: 6.7rem;
+            top: -.2rem;
+        }
+
+        .header__name--link::after {
+            width: 7.6rem;
+            bottom: -.5rem;
+        }
+
+        .header .hamburger-menu {
+            width: 3.8rem;
+            margin-top: -2.3rem;
+            padding-bottom: 2rem;
+        }
+
+    }
+
+
+///// iPhone 6/7/8 Plus (736 x 414)
+    @media screen and (max-height: 414px) and (max-width: 736px) and (orientation: landscape) {
+
+        .header__name--link::before {
+            top: -.5rem;
+        }
+
+        .header__title--link {
+            margin-left: -3rem;
+        }
+
+
+
+    }
+
+
+///// LG Optimus L70 (640 x 384)
+    @media screen and (max-height: 384px) and (orientation: landscape) {
+    .header__name--link::before {
+        top: -1.3rem;
+    }
+
+    .header__name {
+        margin-top: -.8rem;
+    }
+
+}
+
+///// Galaxy Note 3, etc. (640 x 360)
+@media screen and (max-height: 360px) and (max-width: 640px) and (orientation: landscape) {
+
+    .header__name--link {
+        margin-bottom: 0rem;
+    }
+
+    .header__title--link {
+        margin-top: -.2rem;
+    }
+}
+
+
+///// iPhone 6/7/8 (667 x 375),
+///// iPhone X/XS (812 x 375)
+    @media screen and (max-height: 375px) and (orientation: landscape) {
+        .header__name--link::before {
+            top: -1.3rem;
+        }
+
+        .header__name {
+            margin-top: -.8rem;
+        }
+
+        .header__title {
+            margin-top: 0rem;
+        }
+    }
+
+
+
+
+///// Galaxy S9/S9+ 
+    @media screen and (max-height: 360px) and (max-width: 740px) {
+
+        .header__name--link::before {
+            height: 6.2rem;
+            width: .3rem;
+            top: -1.2rem;
+        }
+
+        .header__title--link {
+            margin-left: -2.4rem;
+        }
+    } 
+
+
+//// Galaxy Note 3,
+//// Galaxy S5, 
+//// Microsoft Lumia 550/950
+@media screen and (max-height: 360px) and (orientation: landscape) {
+
+    .header__title--link {
+        margin-left: -1.7rem;
+    }
+
+}
+
+//// Galaxy S20 (800 x 360) 
+@media screen and (max-height: 360px) and (max-width: 800px) and (orientation: landscape){
+
+    .header__name--link {
+        margin-left: -1.8rem;
+    }
+
+    .header__title--link {
+        margin-left: -5rem;
+    }
+
+}
+
+
+///// iPhone 5/SE iOS 10.3.1
+    @media screen and (max-height: 320px) and (orientation: landscape) {
+        .header {
+            margin-top: -1.4rem;
+        }
+
+        .header__name--link::after {
+            width: 7.6rem;
+            bottom: -.5rem;
+        }
+    }
+
+
+
+
+
+
+

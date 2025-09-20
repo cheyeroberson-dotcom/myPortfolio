@@ -1,0 +1,1095 @@
+.about {
+    background-color: #fff;
+    grid-column: content-start 1 / -1;
+    grid-row: 2 / 3;
+
+    display: grid;
+    grid-template-columns: repeat(16, [about-start] 6.25% [about-end]);
+    grid-template-rows: repeat(15, 1fr);
+    transition: all .25s linear; 
+    -o-transition: all .25s linear; 
+    -moz-transition: all .25s linear; 
+    -webkit-transition: all .25s linear; 
+
+
+    &__bg-top-left-div {
+        grid-column: 1 / 7;
+        grid-row: 1 / 9;
+        background-color: #0E75AF;
+    }
+
+    &__bg-top-right-div {
+        grid-column: 7 / -1;
+        grid-row: 1 / 3;
+        background-color: #2C9EDE;
+    }
+
+    &__bg-bottom-left-div {
+        grid-column: 1 / 7;
+        grid-row: 9 / -1;
+        background-color: #2C9EDE;
+    }
+
+    &__section-bottom-div {
+        grid-column: about-start 1 / about-start 10;
+        grid-row: 13 / -1;
+        background-color: #2C4057;
+    }
+
+    &__me {
+        grid-column: 10 / 15;
+        grid-row: 5 / 12;
+        color: #000;
+        z-index: 400;
+
+        display: grid;
+        grid-template-columns: repeat(4, [paragraph-start] 1fr [paragraph-end]);
+        grid-template-rows: repeat(3, 1fr);
+        row-gap: 3%;
+        transition: all .25s linear; 
+        -o-transition: all .25s linear; 
+        -moz-transition: all .25s linear; 
+        -webkit-transition: all .25s linear; 
+
+
+        &__header {
+            grid-row: 1 / 2;
+            grid-column: 1 / 3;
+            align-self: end;
+            font-size: 7.5rem;
+        }
+
+        &__p1 {
+            grid-row: 2;
+            grid-column: 1 / -1;
+            font-weight: 400;
+            line-height: 2.5rem;
+        }
+
+        &__p2 {
+            grid-row: 3;
+            grid-column: 1 / -1;
+            font-weight: 400;
+            line-height: 2.5rem;
+        }
+    }
+
+    &__line {
+            grid-row: 7 / 11;
+            grid-column: 4 / 12;
+            align-self: center;
+
+            display: grid;
+            grid-template-rows: repeat(3, 1fr);
+            gap: 4.5rem;
+
+        &--1 {
+            height: .5rem;
+            width: 100%;
+            background-image: linear-gradient(to right, rgba(#C4C4C4, .9) 60%, rgba(#fff,  .9));
+            grid-row: 1;
+            align-self: start;
+            // opacity: 0;
+            // animation: from-left 1.2s .8s ease forwards;
+        }
+
+        
+        &--2 {
+            height: .5rem;
+            width: 100%;
+            background-image: linear-gradient(to right, rgba(#C4C4C4, .9) 60%, rgba(#fff,  .9));
+            grid-row: 2;
+            align-self: center;
+            opacity: 0;
+            transition: opacity 1200ms ease-in;
+        }
+
+        &--3{
+            height: .5rem;
+            width: 100%;
+            background-image: linear-gradient(to right, rgba(#C4C4C4, .9) 60%, rgba(#fff,  .9));
+            grid-row: 3;
+            align-self: end;
+            // opacity: 0;
+            // animation: from-left 1.2s 2s ease forwards;
+        }
+
+    }
+
+    &__img-box {
+        background-color: #fff;
+        color: #000;
+        grid-row: 4 / 10;
+        grid-column: 5 / 8;
+        box-shadow: .12rem .12rem .2rem .1rem rgba(#000, .2);
+        z-index: 400;
+
+        display: grid;
+        grid-template-rows: repeat(4, 1fr);
+        grid-template-columns: repeat(4, 1fr);
+
+        &__top-div {
+            grid-row: 1 / 3;
+            grid-column: 1 / -1;
+            background-color: #A3DEFF;
+            z-index: 450;
+        }
+
+        &__pic {
+            grid-row: 1 / 4;
+            grid-column: 2 / 4;
+            align-self: center;
+            // margin-top: -4rem;
+            z-index: 500;
+        }
+
+        &__pic-me {
+            border-radius: 60%;
+            width: 100%;
+
+        }
+
+        &__first-name {
+            grid-row: 3 / 4;
+            grid-column: 2 / 4;
+            align-self: end;
+            justify-self: center;
+            font-size: 4rem;
+            margin-bottom: -.6rem;
+        }
+
+        &__last-name {
+            grid-row: 4 / 5;
+            grid-column: 2 / 4;
+            align-self: start;
+            justify-self: center;
+            font-size: 4rem;
+        }
+    }
+
+    &__img-top-frame {
+        background-color: #2C4057;
+        grid-column: 4 / 8;
+        grid-row: 3 / 4;
+        box-shadow: 12px 12px 2px 1px rgba(#000, .2);
+        z-index: 400;
+
+
+        &__header {
+            color: #fff;
+            font-weight: 400;
+            font-size: 7.2rem;
+            margin-left: 6rem;
+            transition: all .25s linear; 
+            -o-transition: all .25s linear; 
+            -moz-transition: all .25s linear; 
+            -webkit-transition: all .25s linear; 
+        }
+    }
+
+    &__img-bottom-frame {
+        background-color: #2C4057;
+        grid-column: 5 / 9;
+        grid-row: 10 / 11;
+        box-shadow: 12px 12px 2px 1px rgba(#000, .2);
+        z-index: 400;
+
+        display: grid;
+        
+        &__title {
+            color: #fff;
+            font-weight: 400;
+            font-size: 220%;
+            grid-row: 1;
+            grid-column: 1 / -1;
+            place-self: center;
+            padding: 2rem;
+            transition: all .25s linear; 
+            -o-transition: all .25s linear; 
+            -moz-transition: all .25s linear; 
+            -webkit-transition: all .25s linear; 
+
+        }
+    }
+}
+
+
+/////// LEFT ANIMATION CLASSES ///////
+.about-left-slide {
+    opacity: 0;
+    transition: opacity 900ms ease-in;
+}
+.about-left-slide.about-animate-left {
+    animation: aboutAnimateLeft 1000ms;
+    opacity: 1;
+}
+
+///// BACKGROUND LINES /////
+
+/// FROM LEFT
+.line-slide-right {
+    opacity: 0;
+    transition: opacity 1200ms ease-in;
+}
+.line-slide-right.slide-in-right {
+    animation: from-left 1200ms ease forwards;
+    opacity: 1;
+}
+
+/// FROM RIGHT
+.about__line--2.slide-in-left {
+    animation: from-right 1200ms ease forwards;
+    opacity: 1;
+}
+
+/////// UP ANIMATION CLASSES
+.about-up-slide {
+    opacity: 0;
+    transition: opacity 900ms ease-in;
+}
+
+.about-up-slide.about-animate-up {
+    animation: animateUp 1000ms;
+    opacity: 1;
+}
+
+
+//////////////////////// KEY FRAMES ////////////////////////
+
+@keyframes aboutAnimateLeft {
+    0% {
+        transform: translateX(-50rem);
+    }
+
+    100% {
+        transform: translate(0rem);
+    }
+}
+
+
+
+ ////////////////////////////////////////////////////////////
+//////////////////////// MEDIA QUERIES /////////////////////
+///////////////////////////////////////////////////////////
+
+
+////////////// 1650px //////////////
+
+@media screen and (max-width: 1650px){
+    .about__me {
+        grid-column: 10 / 15;
+    }
+
+    .about__img-top-frame__header {
+        font-size: 6.2rem;
+    }
+
+    .about__img-bottom-frame__title {
+        font-size: 200%;
+    }
+
+    .about__img-box__pic-me {
+        width: 120%;
+    }
+
+    .about__img-box__pic {
+        margin-left: -2.5rem;
+    }
+
+    .about__img-box__first-name {
+        margin-bottom: -1.6rem;
+        font-size: 3.7rem;
+    }
+
+    .about__img-box__last-name {
+        font-size: 3.7rem;
+    }
+}
+
+
+////////////// 1515px //////////////
+
+@media screen and (max-width: 1515px){
+    .about__img-top-frame__header {
+        font-size: 5.6rem;
+    }
+
+    .about__img-bottom-frame__title {
+        font-size: 150%;
+    }
+
+    .about__me__header {
+        font-size: 7rem;
+    }
+
+    .about__img-box__first-name {
+        font-size: 3.3rem;
+    }
+
+    .about__img-box__last-name {
+        font-size: 3.3rem;
+    }
+}
+
+
+////////////// 1380px //////////////
+@media screen and (max-width: 1380px){
+    .about__me__p1 {
+        font-size: 1.6rem;
+    }
+
+    .about__me__p2 {
+        font-size: 1.6rem;
+    }
+
+}
+
+
+
+////////////// 1355px //////////////
+
+@media screen and (max-width: 1355px){
+    .about__me {
+        grid-column: 10 / 16;
+    }
+    
+    .about__me__p1 {
+        line-height: 2.2rem;
+    }
+    
+    .about__me__p2 {
+        line-height: 2.2rem;
+    }
+
+    .about__img-top-frame {
+        grid-column: 3 / 8;
+    }
+
+    .about__img-top-frame__header {
+        margin-left: 0rem;
+        text-align: center;
+    }
+
+    .about__img-box {
+        grid-column: 4 / 8;
+    }
+
+    .about__img-bottom-frame {
+        grid-column: 4 / 9;
+    }
+
+    .about__img-box__first-name {
+        grid-row: 4 / 5;
+        align-self: start;
+        margin-bottom: 0rem;
+        margin-top: -1rem;
+    }
+
+    .about__img-box__last-name {
+        grid-row: 4 / 5;
+        align-self: center;
+    }
+
+}
+
+////////////// 1300px //////////////
+@media screen and (max-width: 1300px){
+    .about__section-bottom-div {
+        grid-column: about-start 1 / about-start 11;
+    }
+
+}
+
+
+////////////// 1100px //////////////
+
+@media screen and (max-width: 1100px){
+    .about__img-box {
+        grid-row: 4 / 8;
+    }
+
+    .about__img-bottom-frame {
+        grid-row: 8 / 9;
+    }
+
+    .about__img-box__pic-me {
+        width: 100%;
+    }
+
+    .about__img-box__pic {
+        margin-left: 0rem;
+    }
+
+    .about__img-box__first-name {
+        font-size: 2.6rem;
+        align-self: start;
+        justify-self: center;
+        grid-column: 1 / 3;
+        margin-top: 0;
+    }
+
+    .about__img-box__last-name {
+        font-size: 2.6rem;
+        align-self: start;
+        justify-self: start;
+        grid-column: 3 / -1;
+        margin-left: -1rem;
+    }
+
+    .about__me__p1 {
+        font-size: 1.6rem;
+        line-height: 2.1rem;
+    }
+
+    .about__me__p2 {
+        font-size: 1.6rem;
+        line-height: 2.1rem;
+    }
+
+    .about__img-top-frame__header {
+        font-size: 5.2rem;
+    }
+}
+
+
+
+////////////// 960px //////////////
+
+@media screen and (max-width: 960px){
+    .about__bg-top-right-div {
+        display: none;
+    }
+
+    .about__bg-top-left-div {
+        grid-column: 1 / -1;
+    }
+
+    .about__bg-bottom-left-div {
+        grid-column: 1 / -1;
+    }    
+
+    .about__section-bottom-div {
+        display: none;
+    }
+
+    .about__me {
+        grid-column: 3 / 14;
+        grid-row: 8 / 15;
+        color: #fff;
+    }
+
+    .about__line {
+        grid-row: 6 / 9;
+        grid-column: 8 / -1;
+    }
+
+    .about__img-top-frame {
+        grid-column: 8 / 14;
+        grid-row: 2 / 3;
+        width: 29rem;
+        justify-self: end;
+    }
+
+    .about__img-box {
+        grid-column: 10 / 14;
+        grid-row: 3 / 7;
+        width: 22.8rem;
+        justify-self: center;
+    }
+
+    .about__img-bottom-frame {
+        grid-column: 10 / 16;
+        grid-row: 7 / 8;
+        width: 30rem;
+        justify-self: start;
+    }
+
+    .about__img-box__first-name {
+        align-self: center;
+        margin-top: 0rem;
+        margin-left: -1.6rem;
+    }
+
+    .about__img-box__last-name {
+        align-self: center;
+        margin-left: -1.5rem;
+    }
+
+    .about__me__p1 {
+        align-self: center;
+    }
+
+}
+
+
+////////////// 750px //////////////
+
+@media screen and (max-width: 750px){
+    .about__img-top-frame {
+        grid-column: 6 / 12;
+    }
+
+    .about__img-box {
+        grid-column: 8 / 12;
+    }
+
+    .about__img-bottom-frame {
+        grid-column: 8 / 14;
+    } 
+
+    .about__me {
+        grid-column: 2 / 14;
+        grid-row: 8 / 16;
+    }
+}
+
+////////////// 585px //////////////
+
+@media screen and (max-width: 585px){
+
+    .about__img-top-frame__header {
+        font-size: 5rem;
+    }
+
+    .about__img-bottom-frame {
+        grid-column: 6 / 12;
+        width: 26rem;
+    } 
+
+    .about__img-bottom-frame__title {
+        font-size: 140%;
+    }
+
+    .about__me__header {
+        font-size: 6rem;
+    }
+
+    .about__img-box__first-name {
+        font-size: 2.6rem;
+    }
+
+    .about__img-box__last-name {
+        font-size: 2.6rem;
+    }
+
+    .about__img-top-frame {
+        grid-column: 8 / 14;
+    }
+}
+
+
+////////////// 530px //////////////
+
+@media screen and (max-width: 530px){
+
+    .about__me {
+        grid-row: 8 / 15;
+    }
+}
+
+
+//////////////////////////////////////////////////
+///////////////////// DEVICES ///////////////////
+////////////////////////////////////////////////
+
+
+
+//<<<<<<<<<<<<<<<<  PORTRAIT  >>>>>>>>>>>>>>>>
+
+
+    // iPhone 12 Pro Max (926 x 428) 
+    @media screen and (max-height: 926px) and (max-width: 428px) and (orientation: portrait) {
+        .about__img-top-frame__header {
+            font-size: 4rem;
+            padding: .6rem;
+        }
+        
+        .about__img-bottom-frame__title {
+            font-size: 110%;
+        }
+
+        .about__img-box__first-name {
+            font-size: 2.2rem;
+            margin-left: .4rem;
+        }
+
+        .about__img-box__last-name {
+            font-size: 2.2rem;
+            margin-left: -1rem;
+        }
+
+        .about__me__header {
+            font-size: 4rem;
+        }
+    }
+
+
+    // Galaxy Note 9 Android 7.0 (846 x 414) 
+    @media screen and (max-height: 846px) and (orientation: portrait){
+
+        .about__me {
+            grid-column: 2 / 16;
+        }
+    }
+
+    // Galaxy S20 (854 x 384),
+    // Galaxy S20 (800 x 360) 
+    @media screen and (max-height: 854px) and (max-width: 384px)  and (orientation: portrait){
+
+        .about__me {
+            grid-column: 2 / 16;
+        }
+
+        .about__me__header {
+            font-size: 3rem;
+        }
+
+        .about__me__p1 {
+            font-size: 1.5rem;
+        }
+
+        .about__me__p2 {
+            font-size: 1.5rem;
+        }
+
+    }
+
+
+    // Galaxy S9/S9+ Android 7.0 
+    @media screen and (max-height: 740px) and (orientation: portrait){
+        .about__img-top-frame__header {
+            font-size: 4rem;
+        }
+
+        .about__img-bottom-frame__title {
+            font-size: 105%;
+            padding: 1rem;
+        }
+
+        .about__img-box {
+            grid-column: 6 / 14;
+            width: 20rem;
+        }
+
+        .about__img-box__pic-me {
+            width: 100%;
+            margin-left: 1rem;
+        }
+
+        .about__img-box__first-name {
+            font-size: 2.2rem;
+            margin-left: 1rem;
+            align-self: start;        
+        }
+
+        .about__img-box__last-name {
+            font-size: 2.2rem;
+            margin-left: -1rem;
+            align-self: start;
+        }
+       
+        .about__me {
+            grid-column: 2 / 16;
+        }
+        
+        .about__me__header {
+            font-size: 4rem;
+        }
+        
+        .about__me__p1 {
+            font-size: 1.6rem;
+            line-height: 1.9rem;
+        }
+
+        .about__me__p2 {
+            font-size: 1.6rem;
+            line-height: 1.9rem;
+        }
+    }
+
+// iPhone 6/7/8 
+
+    @media screen and (max-height: 667px) and (orientation: portrait){
+
+        .about__img-box {
+            grid-column: 6 / 15;
+            width: 19.5rem;
+        }
+
+        .about__img-top-frame__header {
+            font-size: 4rem;
+            text-align: left;
+            margin-left: 2rem;
+        }
+
+        .about__img-top-frame {
+            grid-column: 4 / 15;
+            width: 25rem;
+        }
+
+        .about__img-bottom-frame {
+            grid-column: 6 / -1;
+            width: 24rem;
+            margin-left: 0;
+        }
+
+        .about__img-bottom-frame__title {
+            font-size: 120%;
+            padding: 0rem;
+        }
+
+        .about__img-box__first-name {
+            font-size: 2rem;
+            margin-left: -.3rem;
+        }
+
+        .about__img-box__last-name {
+            font-size: 2rem;
+            margin-left: -.8rem;
+        }
+
+        .about__me__header {
+            font-size: 4rem;
+            margin-bottom: -.5rem;
+        }
+
+        .about__me__p1 {
+            font-size: 1.5rem;
+            line-height: 1.8rem;
+        }
+
+        .about__me__p2 {
+            font-size: 1.5rem;
+            line-height: 1.8rem;
+        }
+
+    }
+
+    // Galaxy Note 3,
+    // Galaxy Note S5, 
+    // Microsoft Lumia 550/950
+    @media screen and (max-height: 640px) and (orientation: portrait){
+        .about__img-top-frame__header {
+            font-size: 4rem;
+        }
+
+        .about__img-bottom-frame__title {
+            font-size: 105%;
+            padding: 1rem;
+        }
+
+        .about__img-box__pic-me {
+            width: 100%;
+            margin-left: 1rem;
+        }
+
+        .about__img-box__first-name {
+            font-size: 2.2rem;
+            margin-left: 1rem;
+        }
+
+        .about__img-box__last-name {
+            font-size: 2.2rem;
+            margin-left: -1rem;
+        }
+       
+        .about__me {
+            grid-column: 2 / 16;
+        }
+        
+        .about__me__header {
+            font-size: 3.5rem;
+            margin-bottom: -.5rem;
+        }
+        
+        .about__me__p1 {
+            font-size: 1.4rem;
+            line-height: 1.7rem;
+        }
+
+        .about__me__p2 {
+            font-size: 1.4rem;
+            line-height: 1.7rem;
+        }
+
+    }
+
+
+// iPhone 5/SE 
+    @media screen and (max-height: 568px) and (orientation: portrait){
+        .about__img-box__pic-me {
+            width: 90%;
+            margin-left: 1.8rem;
+            margin-top: 1rem;
+        }
+
+        .about__img-box__first-name {
+            font-size: 2rem;
+            margin-left: -.3rem;
+        }
+
+        .about__img-box__last-name {
+            font-size: 2rem;
+            margin-left: -.8rem;
+        }
+
+        .about__img-box {
+            grid-column: 7 / 15;
+            width: 17.8rem;
+        }
+
+        .about__img-top-frame {
+            grid-column: 4 / 16;
+            width: 22rem;
+        }
+
+        .about__img-bottom-frame {
+            grid-column: 6 / 15;
+            width: 21rem;
+            margin-left: 0;
+        }
+
+        .about__img-top-frame__header {
+            font-size: 3.5rem;
+        }
+
+        .about__me__header {
+            font-size: 3rem;
+            margin-bottom: -.5rem;
+        }
+
+        .about__me__p1 {
+            font-size: 1.2rem;
+            line-height: 1.6rem;
+        }
+
+        .about__me__p2 {
+            font-size: 1.2rem;
+            line-height: 1.6rem;
+        }
+        
+    }
+
+
+
+
+//<<<<<<<<<<<<<<<<  LANDSCAPE  >>>>>>>>>>>>>>>>
+
+    // iPhone 12 Pro Max (926 x 428) 
+    @media screen and (max-height: 428px) and (max-width: 926px) and (orientation: landscape) {
+        .about {
+            grid-row: 3 / 5;
+        }
+
+        .about__me__header {
+            font-size: 4rem;
+            margin-bottom: .4rem;
+        }
+
+        .about__img-box__first-name {
+            font-size: 2.5rem;
+            margin-left: -.2rem;
+        }
+
+        .about__img-box__last-name {
+            font-size: 2.5rem;
+            margin-left: -1rem;
+        }
+
+    }
+
+    // iPhone XR iOS (896 x 414), 
+    // iPhone XS Max (896 x 414), 
+    // Galaxy Note 9 (846 x 414),
+    // iPhone 6/7/8 Plus (736 x 414) 
+    @media screen and (max-height: 414px) and (orientation: landscape){
+        .about {
+            grid-row: 3 / 5;
+        }
+
+        .about__me__header {
+            font-size: 4.5rem;
+        }
+
+        .about__img-box {
+            width: 21.4rem;
+        }
+        
+    }
+
+    // Galaxy S9/S9+ (740 x 360)
+    @media screen and (max-height: 360px) and (max-width: 740px){
+        .about {
+            grid-row: 3 / 5;
+        }
+
+        .about__img-box__pic-me {
+            width: 100%;
+            margin-left: 1rem;
+            margin-top: .4rem;
+        }
+
+        .about__img-box {
+            grid-column: 6 / 14;
+            width: 18rem;
+        }
+    }
+
+    // Galaxy Note 3, (640 x 360)
+    // Galaxy Note S5, (640 x 360)
+    // Microsoft Lumia 550/950 (640 x 360)
+    @media screen and (max-height: 360px) and (orientation: landscape){
+        .about {
+            grid-row: 3 / 5;
+        }
+
+        .about__img-box__first-name {
+            font-size: 2rem;
+            margin-left: -2rem;
+        }
+    
+        .about__img-box__last-name {
+            font-size: 2rem;
+        }
+
+        .about__img-box {
+            grid-row: 3 / 8;
+        }
+
+        .about__img-bottom-frame {
+            grid-row: 8 / 9;
+        }
+
+    }
+    
+
+    // iPhone 5/SE (568 x 320)
+    @media screen and (max-height: 320px) and (orientation: landscape){
+        .about {
+            grid-row: 3 / 5;
+        }
+
+        .about__img-box__first-name {
+            font-size: 2rem;
+            margin-left: -.3rem;
+            align-self: start;
+        }
+
+        .about__img-box__last-name {
+            font-size: 2rem;
+            margin-left: -.8rem;
+            align-self: start;
+        }
+
+        .about__img-box__pic-me {
+            width: 115%;
+            margin-left: .2rem;
+        }
+
+        .about__img-box {
+            grid-column: 8 / 14;
+            width: 20rem;
+            justify-self: end;
+        }
+
+        .about__img-top-frame {
+            grid-column: 6 / 14;
+            width: 25rem;
+        }
+
+        .about__img-bottom-frame {
+            grid-column: 8 / 16;
+            width: 26.5rem;
+            margin-left: 0;
+        }
+
+        .about__img-bottom-frame__title {
+            font-size: 115%;
+            padding: 1rem;
+        }
+
+        .about__img-top-frame__header {
+            font-size: 3.5rem;
+            text-align: left;
+            margin-left: 2rem;
+        }
+
+        .about__me {
+            grid-column: 2 / 16;
+        }
+
+        .about__me__header {
+            font-size: 4rem;
+        }
+
+        .about__me__p1 {
+            font-size: 1.5rem;
+            line-height: 1.8rem;
+        }
+
+        .about__me__p2 {
+            font-size: 1.5rem;
+            line-height: 1.8rem;
+        }
+    }
+
+    // iPhone 6/7/8 (667 x 375)
+    @media screen and (max-height: 375px) and (orientation: landscape){
+        .about {
+            grid-row: 3 / 5;
+        }
+
+        .about__img-top-frame__header {
+            font-size: 4rem;
+            text-align: left;
+            margin-left: 2.5rem;
+        }
+
+        .about__img-box__first-name {
+            font-size: 2.2rem;
+            margin-left: -.2rem;
+        }
+
+        .about__img-box__last-name {
+            font-size: 2.2rem;
+            margin-left: -.8rem;
+        }
+
+        .about__img-box__pic {
+            grid-column: 1 / 5;
+        }
+
+        .about__img-box__pic-me {
+            width: 85%;
+            margin-left: 1.3rem;
+        }
+
+        .about__img-box__first-name {
+            margin-left: .3rem;
+        }
+
+    }
+
+
+    // iPhone X/XS (812 x 375)
+    @media screen and (max-height: 375px) and (orientation: landscape){
+        .about {
+            grid-row: 3 / 5;
+        }
+    }
+
+
+    // LG Optimus L70 (640 x 384)
+    @media screen and (max-height: 384px) and (orientation: landscape){
+        .about {
+            grid-row: 3 / 5;
+        }
+    }
+
+
+    // Nexus 5X & 6P (732 x 412)
+    @media screen and (max-height: 412px) and (orientation: landscape){
+        .about {
+            grid-row: 3 / 5;
+        }
+    }

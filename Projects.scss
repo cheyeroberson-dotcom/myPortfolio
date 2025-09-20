@@ -1,0 +1,2412 @@
+.projects {
+    grid-column: content-start 1 / -1;
+    grid-row: 3 / 4;
+
+    display: grid;
+    grid-template-columns: repeat(16, [projects-start] 6.25% [projects-end]);
+    grid-template-rows: repeat(5, 1fr) 15rem repeat(5, 1fr) 15rem repeat(5, 1fr) 15rem repeat(5, 1fr);
+
+
+    &__long-bg-div {
+        grid-column: projects-start 3 / projects-start 10;
+        grid-row: 1 / -1;
+        background-color: #2C4057;
+    }
+
+    &__header {
+        grid-column: 4 / 7;
+        grid-row: 1 / 2;
+        align-self: center;
+        justify-self: center;
+        color: #fff;
+        font-weight: 400;
+        font-size: 6.5rem;
+        z-index: 400;
+    }
+
+    
+}
+
+.not-responsive {
+    color: #d5eb10;
+}
+
+
+///////////////////// PORTFOLIO PROJECT ////////////////////////
+
+.portfolio {
+
+    grid-column: projects-start 3 / projects-start 16;
+    grid-row: 2 / 6;
+    color: #fff;
+
+    display: grid;
+    grid-template-columns: repeat(14, [proj1-start] 8.33% [proj1-end]);
+    grid-template-rows: repeat(7, 1fr);
+
+
+    &__bg {
+        grid-column: 5 / 10;
+        grid-row: 2 / 7;
+        background-color: #7A409C;
+        height: 70%;
+        width: 90%;
+        justify-self: center;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(4, 1fr);
+
+        &__img {
+            grid-column: 2 / 4;
+            grid-row: 2 / 4;
+            width: 170%;
+            height: 130%;
+            place-self: center;
+        }
+    }
+
+    &__title {
+        grid-column: 2 / 3;
+        grid-row: 2;
+        align-self: end;
+        font-size: 2.8rem;
+        color: #2C9EDE;
+    }
+
+    &__text {
+        grid-column: 2 / 5;
+        grid-row: 3 / 6;
+        line-height: 2.5rem;
+        align-self: center;
+        font-size: 1.8rem;
+        margin-top: -6rem;
+    }
+
+    &__tech-stack {
+        grid-column: 10 / 13;
+        grid-row: 2 / 7;
+        margin-left: 9rem;
+        margin-top: -10rem;
+        position: relative;
+        height: 90%;
+        width: 80%;
+        font-size: 2.2rem;
+        color: #000;
+       
+
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        &::before {
+            content: '';
+            height: 100%;
+            width: 6.5rem;
+            background-color: #2C9EDE;
+            position: absolute;
+            left: -3.2rem;
+            top: 4.8rem;
+        }
+
+        &__header {
+            z-index: 400;
+        }
+
+        &__item {
+            font-weight: 600;
+            font-size: 2rem;
+            position: relative;
+
+            &::after {
+                content: '';
+                height: .6rem;
+                width: 80%;
+                background-color: #C4C4C4;
+                position: absolute;
+                left: -4.8rem;
+                bottom: -.6rem;
+            }
+        }
+    }
+
+}
+
+
+///////////////////// PROJECT #1 ////////////////////////
+
+.proj1 {
+
+    grid-column: projects-start 3 / projects-start 11;
+    grid-row: 6 / 11;
+    color: #fff;
+
+    display: grid;
+    grid-template-columns: repeat(14, [proj1-start] 8.33% [proj1-end]);
+    grid-template-rows: repeat(7, 1fr);
+
+    &__before {
+        
+        &__header {
+        grid-column: 2 / 4;
+        grid-row: 1;
+        align-self: end;
+        justify-self: center;
+        font-size: 4rem;
+        font-weight: 400;
+        position: relative;
+
+            &::before {
+                content: '';
+                height: 10rem;
+                width: .4rem;
+                background-color: #2C9EDE;
+                position: absolute;
+                left: -1.5rem;
+                top: -1.8rem;
+            }
+
+        }
+
+        &__bg {
+            grid-column: 1 / 6;
+            grid-row: 2 / 5;
+            width: 90%;
+            height: 70%;
+            margin-left: 4rem;
+            background-color: #D2B757;
+            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: repeat(4, 1fr);
+
+            &__img {
+                grid-column: 2 / 4;
+                grid-row: 2 / 4;
+                width: 200%;
+                margin-left: 15rem;
+                place-self: center;
+            }
+        }
+    }
+
+    &__after {
+        
+        &__header {
+        grid-column: 9 / 11;
+        grid-row: 2 / 3;
+        align-self: end;
+        justify-self: end;
+        font-size: 4rem;
+        font-weight: 400;
+        position: relative;
+
+            &::before {
+                content: '';
+                height: 10rem;
+                width: .4rem;
+                background-color: #2C9EDE;
+                position: absolute;
+                left: -2rem;
+                top: -1.8rem;
+            }
+        }
+
+        &__bg {
+            grid-column: 9 / 15;
+            grid-row: 3 / 7;
+            background-color: #7A409C;
+            height: 60%;
+            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: repeat(4, 1fr);
+
+            &__img {
+                grid-column: 2 / 4;
+                grid-row: 2 / 4;
+                width: 150%;
+                place-self: center;
+            }
+        }
+    }
+
+    &__greater-sign {
+        grid-column: 7 / 9;
+        grid-row: 3 / 4;
+        font-size: 14rem;
+        align-self: center;
+        justify-self: center;
+        margin-right: -.6rem;
+        color: #2C9EDE;
+        z-index: 400;
+    }
+
+    &__title {
+        grid-column: 2 / 3;
+        grid-row: 5;
+        align-self: start;
+        font-size: 2.8rem;
+        color: #2C9EDE;
+    }
+
+    &__text {
+        grid-column: 2 / 8;
+        grid-row: 5 / 8;
+        line-height: 2.7rem;
+        align-self: center;
+        font-size: 2rem;
+    }
+
+    &__tech-stack {
+        grid-column: 13 / 16;
+        grid-row: 7 / 11;
+        margin-left: 3rem;
+        margin-top: -10rem;
+        position: relative;
+        height: 90%;
+        font-size: 2.2rem;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        &::before {
+            content: '';
+            height: 100%;
+            width: 6.5rem;
+            background-color: #2C9EDE;
+            position: absolute;
+            left: -3.2rem;
+            top: 4.8rem;
+        }
+
+        &__header {
+            z-index: 400;
+        }
+
+        &__item {
+            font-weight: 600;
+            font-size: 2rem;
+            position: relative;
+
+            &::after {
+                content: '';
+                height: .6rem;
+                width: 80%;
+                background-color: #C4C4C4;
+                position: absolute;
+                left: -4.8rem;
+                bottom: -.6rem;
+            }
+        }
+    }
+
+}
+
+///////////////////// PROJECT #2 ////////////////////////
+
+.proj2 {
+
+    grid-column: projects-start 3 / projects-start 11;
+    grid-row: 12 / 17;
+    color: #fff;
+
+    display: grid;
+    grid-template-columns: repeat(14, [proj2-start] 8.33% [proj2-end]);
+    grid-template-rows: repeat(7, 1fr);
+
+    &__before {
+        
+        &__header {
+        grid-column: 2 / 4;
+        grid-row: 1;
+        align-self: end;
+        justify-self: center;
+        font-size: 4rem;
+        font-weight: 400;
+        position: relative;
+
+            &::before {
+                content: '';
+                height: 10rem;
+                width: .4rem;
+                background-color: #2C9EDE;
+                position: absolute;
+                left: -1.5rem;
+                top: -2.5rem;
+            }
+
+        }
+
+        &__bg {
+            grid-column: 1 / 6;
+            grid-row: 2 / 5;
+            width: 90%;
+            height: 70%;
+            margin-left: 4rem;
+            background-color: #D2B757;
+            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: repeat(4, 1fr);
+
+            &__img {
+                grid-column: 2 / 4;
+                grid-row: 2 / 4;
+                width: 200%;
+                margin-left: 15rem;
+                place-self: center;
+            }
+        }
+    }
+
+    &__after {
+        
+        &__header {
+        grid-column: 9 / 11;
+        grid-row: 2 / 3;
+        align-self: end;
+        justify-self: end;
+        font-size: 4rem;
+        font-weight: 400;
+        position: relative;
+
+            &::before {
+                content: '';
+                height: 10rem;
+                width: .4rem;
+                background-color: #2C9EDE;
+                position: absolute;
+                left: -2rem;
+                top: -2rem;
+            }
+        }
+
+        &__bg {
+            grid-column: 9 / 15;
+            grid-row: 3 / 7;
+            background-color: #7A409C;
+            height: 70%;
+            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: repeat(4, 1fr);
+
+            &__img {
+                grid-column: 2 / 4;
+                grid-row: 2 / 4;
+                width: 150%;
+                place-self: center;
+            }
+        }
+    }
+
+    &__greater-sign {
+        grid-column: 7 / 9;
+        grid-row: 3 / 4;
+        font-size: 14rem;
+        align-self: center;
+        justify-self: center;
+        margin-right: -.6rem;
+        color: #2C9EDE;
+        z-index: 400;
+    }
+
+    &__title {
+        grid-column: 2 / 3;
+        grid-row: 4;
+        align-self: end;
+        font-size: 2.8rem;
+        color: #2C9EDE;
+    }
+
+    &__text {
+        grid-column: 2 / 7;
+        grid-row: 5 / 7;
+        align-self: center;
+        line-height: 2.7rem;
+        font-size: 2rem;
+        margin-top: 6rem;
+    }
+
+    &__tech-stack {
+        grid-column: 13 / 16;
+        grid-row: 12 / 16;
+        margin-left: 3rem;
+        margin-top: 4rem;
+        position: relative;
+        height: 100%;
+        font-size: 2.2rem;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        &::before {
+            content: '';
+            height: 100%;
+            width: 6.5rem;
+            background-color: #2C9EDE;
+            position: absolute;
+            left: -3.2rem;
+            top: 4.8rem;
+        }
+
+        &__header {
+            z-index: 400;
+        }
+
+        &__item {
+            font-weight: 600;
+            font-size: 2rem;
+            position: relative;
+
+            &::after {
+                content: '';
+                height: .6rem;
+                width: 80%;
+                background-color: #C4C4C4;
+                position: absolute;
+                left: -4.8rem;
+                bottom: -.6rem;
+            }
+        }
+    }
+
+}
+
+///////////////////// PROJECT #3 ////////////////////////
+
+.proj3 {
+
+    grid-column: projects-start 3 / projects-start 11;
+    grid-row: 18 / 23;
+    color: #fff;
+
+    display: grid;
+    grid-template-columns: repeat(14, [proj2-start] 8.33% [proj2-end]);
+    grid-template-rows: repeat(7, 1fr);
+
+    &__before {
+        
+        &__header {
+        grid-column: 2 / 4;
+        grid-row: 1;
+        align-self: end;
+        justify-self: center;
+        font-size: 4rem;
+        font-weight: 400;
+        position: relative;
+
+            &::before {
+                content: '';
+                height: 10rem;
+                width: .4rem;
+                background-color: #2C9EDE;
+                position: absolute;
+                left: -1.5rem;
+                top: -2rem;
+            }
+
+        }
+
+        &__bg {
+            grid-column: 1 / 6;
+            grid-row: 2 / 5;
+            width: 90%;
+            height: 70%;
+            margin-left: 4rem;
+            background-color: #D2B757;
+            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: repeat(4, 1fr);
+
+            &__img {
+                grid-column: 2 / 4;
+                grid-row: 2 / 4;
+                width: 200%;
+                margin-left: 15rem;
+                place-self: center;
+            }
+        }
+    }
+
+    &__after {
+        
+        &__header {
+        grid-column: 9 / 11;
+        grid-row: 2 / 3;
+        align-self: end;
+        justify-self: end;
+        font-size: 4rem;
+        font-weight: 400;
+        position: relative;
+
+            &::before {
+                content: '';
+                height: 10rem;
+                width: .4rem;
+                background-color: #2C9EDE;
+                position: absolute;
+                left: -2rem;
+                top: -2rem;
+            }
+        }
+
+        &__bg {
+            grid-column: 9 / 15;
+            grid-row: 3 / 7;
+            background-color: #7A409C;
+            height: 70%;
+            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: repeat(4, 1fr);
+
+            &__img {
+                grid-column: 2 / 4;
+                grid-row: 2 / 4;
+                width: 150%;
+                place-self: center;
+            }
+        }
+    }
+
+    &__greater-sign {
+        grid-column: 7 / 9;
+        grid-row: 3 / 4;
+        font-size: 14rem;
+        place-self: center;
+        margin-right: -.6rem;
+        color: #2C9EDE;
+        z-index: 400;
+    }
+
+    &__title {
+        grid-column: 2 / 4;
+        grid-row: 4;
+        align-self: end;
+        font-size: 2.8rem;
+        color: #2C9EDE;
+    }
+
+    &__text {
+        grid-column: 2 / 7;
+        grid-row: 5 / 7;
+        align-self: center;
+        line-height: 2.5rem;
+        font-size: 1.8rem;
+    }
+
+    &__tech-stack {
+        grid-column: 13 / 16;
+        grid-row: 18 / 20;
+        margin-left: 3rem;
+        margin-top: 5rem;
+        position: relative;
+        height: 90%;
+        
+        font-size: 2.2rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        &::before {
+            content: '';
+            height: 100%;
+            width: 6.5rem;
+            background-color: #2C9EDE;
+            position: absolute;
+            left: -3.2rem;
+            top: 4.8rem;
+        }
+
+        &__header {
+            z-index: 400;
+        }
+
+        &__item {
+            font-weight: 600;
+            font-size: 2rem;
+            position: relative;
+
+            &::after {
+                content: '';
+                height: .6rem;
+                width: 80%;
+                background-color: #C4C4C4;
+                position: absolute;
+                left: -4.8rem;
+                bottom: -.6rem;
+            }
+        }
+    }
+
+}
+
+/////// UP ANIMATION CLASSES
+.projects-up-slide {
+    opacity: 0;
+    transition: opacity 900ms ease-in;
+}
+
+.projects-up-slide.projects-animate-up {
+    animation: animateUp 1000ms;
+    opacity: 1;
+}
+
+
+ ////////////////////////////////////////////////////////////
+//////////////////////// MEDIA QUERIES /////////////////////
+///////////////////////////////////////////////////////////
+
+
+
+////////////// 1475px //////////////
+@media screen and (max-width: 1475px){
+
+    .portfolio__bg {
+        height: 65%;
+    }
+
+    .proj1__before__header {
+        font-size: 3.2rem;
+    }
+
+    .proj1__after__header {
+        font-size: 3.2rem;
+    }
+
+    .proj1__title {
+        font-size: 2.4rem;
+    }
+
+    .proj2__before__header {
+        font-size: 3.2rem;
+    }
+
+    .proj2__after__header {
+        font-size: 3.2rem;
+    }
+    
+    .proj1__title {
+        font-size: 2.4rem;
+    }
+
+    .proj3__before__header {
+        font-size: 3.2rem;
+    }
+
+    .proj3__after__header {
+        font-size: 3.2rem;
+    }
+
+    .portfolio__text {
+        line-height: 2.4rem;
+        font-size: 1.8rem;
+    }
+
+    .proj1__text {
+        line-height: 2.4rem;
+        font-size: 1.8rem;
+    }
+
+    .proj2__text {
+        line-height: 2.4rem;
+        font-size: 1.8rem;
+    }
+
+    .proj3__text {
+        line-height: 2.4rem;
+        font-size: 1.8rem;
+    }
+
+    .portfolio__tech-stack__item::after,
+    .proj1__tech-stack__item::after,
+    .proj2__tech-stack__item::after,
+    .proj3__tech-stack__item::after {
+        width: 100%;
+    }
+
+}
+
+
+////////////// 1330px //////////////
+@media screen and (max-width: 1330px){
+
+    .portfolio__title {
+        font-size: 2.2rem;
+        margin-top: 2rem;
+    }
+
+    .portfolio__text {
+        line-height: 2.2rem;
+        font-size: 1.6rem;
+    }
+
+    .portfolio__bg {
+        grid-row: 2 / 6;
+    }
+
+    .proj2__before__header::before {
+        height: 10rem;
+    }
+
+    .proj1__before__header,
+    .proj2__before__header,
+    .proj3__before__header {
+        align-self: end;
+    }
+
+    .portfolio__tech-stack__header,
+    .proj1__tech-stack__header,
+    .proj2__tech-stack__header,
+    .proj3__tech-stack__header {
+        font-size: 2rem;
+    }
+
+    .portfolio__tech-stack__item,
+    .proj1__tech-stack__item,
+    .proj2__tech-stack__item,
+    .proj3__tech-stack__item {
+        font-size: 1.6rem;
+    }
+
+}
+
+
+////////////// 1300px //////////////
+@media screen and (max-width: 1300px){
+    .projects__long-bg-div {
+        grid-column: projects-start 3 / projects-start 11;
+    }
+    
+    .proj1__before__header {
+        grid-column: 3 / 5;
+        margin-bottom: 0rem;
+
+        &::before {
+            height: 8rem;
+        }    
+    }
+    
+    .proj1__after__header {
+        grid-column: 10 / 12;
+
+        &::before {
+        height: 8rem;
+        }
+    }
+
+    .proj2__before__header {
+        grid-column: 3 / 5;
+        margin-bottom: 0rem;
+
+        &::before {
+            height: 8rem;
+        }    
+    }
+    
+    .proj2__after__header {
+        grid-column: 10 / 12;
+
+        &::before {
+            height: 8rem;
+        }
+    }
+
+    .proj3__before__header {
+        grid-column: 3 / 5;
+        margin-bottom: 0rem;
+
+        &::before {
+            height: 8rem;
+        }    
+    }
+    
+    .proj3__after__header {
+        grid-column: 10 / 12;
+
+        &::before {
+            height: 8rem;
+        }
+    }
+
+    .proj1__greater-sign {
+        font-size: 11rem;
+    }
+
+    .proj2__greater-sign {
+        font-size: 11rem;
+    }
+
+    .proj3__greater-sign {
+        font-size: 11rem;
+    }
+
+}
+
+
+////////////// 1260px //////////////
+@media screen and (max-width: 1260px){
+    .portfolio {
+        grid-column: projects-start 2 / projects-start 16;
+    }
+   
+    .portfolio__title {
+        grid-column: 1 / 4;
+        grid-row: 2;
+        align-self: start;
+        margin-top: 0rem;
+    }
+
+    .portfolio__text {
+        grid-column: 1 / 4;
+        grid-row: 2 / 5;
+        margin-top: 0rem;
+    }
+
+    .portfolio__bg {
+        grid-column: 4 / 9;
+        justify-self: end;
+        align-self: start;
+        height: 58%;
+    }
+
+    .projects__long-bg-div {
+        grid-column: projects-start 1 / projects-start 11;
+    }
+
+    .proj1,
+    .proj2,
+    .proj3 {
+        grid-column: projects-start 1 / projects-start 11;
+    }
+
+    .proj1__after__bg,
+    .proj2__after__bg,
+    .proj3__after__bg {
+        grid-column: 8 / 14;
+    }
+
+    .proj1__greater-sign,
+    .proj2__greater-sign,
+    .proj3__greater-sign {
+        grid-column: 6 / 8;
+        grid-row: 4 / 5;
+        font-size: 9rem;
+        align-self: start;
+    }
+
+    .proj1__before__header::before,
+    .proj2__before__header::before,
+    .proj3__before__header::before {
+        top: -1.3rem;
+    }
+
+    .proj1__before__header,
+    .proj2__before__header,
+    .proj3__before__header {
+        grid-column: 2 / 4;
+    }
+
+    .proj1__after__header,
+    .proj2__after__header,
+    .proj3__after__header {
+        grid-column: 8 / 10;
+    }
+
+    .portfolio__tech-stack__header,
+    .proj1__tech-stack__header,
+    .proj2__tech-stack__header,
+    .proj3__tech-stack__header {
+        font-size: 2.2rem;
+    }
+
+    .portfolio__tech-stack,
+    .proj1__tech-stack,
+    .proj2__tech-stack,
+    .proj3__tech-stack {
+        
+        &__item {
+            font-size: 1.7rem;
+        }
+    }
+
+    .portfolio__tech-stack__item::after, 
+    .proj1__tech-stack__item::after, 
+    .proj2__tech-stack__item::after, 
+    .proj3__tech-stack__item::after {
+        width: 17.5rem;
+    }
+
+    .portfolio__tech-stack {
+        grid-column: 10 / 12;
+        margin-left: 6rem;
+        grid-row: 2 / 6;
+        margin-top: -5rem;
+    }
+
+}
+
+////////////// 1105px //////////////
+@media screen and (max-width: 1105px){
+    .portfolio__text::before {
+        top: -2.8rem;
+    }
+
+}
+
+////////////// 1070px //////////////
+@media screen and (max-width: 1070px){
+
+    .portfolio__title {
+        align-self: start;
+    }
+
+    .portfolio__text {
+        font-size: 1.4rem;
+    }
+    
+    .portfolio__bg {
+        height: 50%;
+    }
+    
+    .portfolio__tech-stack {
+        font-size: 2rem;
+    }
+
+    .proj1__tech-stack {
+        font-size: 2rem;
+    }
+
+    .proj2__tech-stack {
+        font-size: 2rem;
+    }
+
+    .proj3__text {
+        margin-top: 3rem;
+    }
+
+    .proj3__tech-stack {
+        font-size: 2rem;
+    }
+
+    .portfolio__tech-stack__item::after,
+    .proj1__tech-stack__item::after,
+    .proj2__tech-stack__item::after,
+    .proj3__tech-stack__item::after {
+        width: 17rem;
+    }
+
+    .portfolio__title,
+    .proj1__title,
+    .proj2__title,
+    .proj3__title {
+        font-size: 2.2rem;
+    }
+
+    .proj1__before__header, 
+    .proj2__before__header, 
+    .proj3__before__header {
+        grid-column: 3 / 5;
+    }
+
+    .proj1__after__header, 
+    .proj2__after__header, 
+    .proj3__after__header {
+        grid-column: 9 / 11;
+    }
+
+}
+
+
+////////////// 950px //////////////
+@media screen and (max-width: 950px){
+
+    .projects__long-bg-div {
+        grid-column: projects-start 1 / -1;
+    }
+
+    .projects {
+        grid-template-rows: repeat(7, 1fr) 15rem repeat(8, 1fr) 15rem repeat(8, 1fr) 15rem repeat(8, 1fr) 15rem;
+    }
+
+    .portfolio__bg {
+        height: 100%;
+        width: 100%;
+        grid-column: 7 / 14;
+        grid-row: 1 / 3;
+    }
+
+    .portfolio__bg__img {
+        height: 150%;
+    }
+
+    .portfolio {
+        grid-column: projects-start 2 / projects-start 16;
+        grid-row: 3 / 9;
+        grid-template-columns: repeat(14, [proj1-start] 1fr [proj1-end]);
+    }
+
+
+    .portfolio__title,
+    .portfolio__text {
+        grid-column: 1 / 5;
+    }
+
+    .portfolio__title {
+        grid-row: 1;
+        align-self: center;
+        margin-bottom: 0rem;
+    }
+
+    .portfolio__text {
+        grid-row: 2 / 3;
+        align-self: end;
+        line-height: 2rem;
+    }
+
+    .portfolio__tech-stack {
+        grid-column: 7 / 11;
+        margin-left: 0rem;
+        margin-top: -2rem;
+        grid-row: 4 / 8;
+    }
+
+    ///// PROJECT 1
+
+    .proj1 {
+        grid-column: projects-start 3 / projects-start 13;
+        grid-row: 9 / 14;
+    }
+
+    .proj1__title {
+        grid-column: 1;
+    }
+
+    .proj1__text {
+        grid-column: 1 / 7;
+        grid-row: 5 / 8;
+        line-height: 2rem;
+        font-size: 1.6rem;
+        align-self: center;
+    }
+
+    .proj1__tech-stack {
+        grid-column: 5 / 13;
+        grid-row: 14 / 17;
+        margin-top: 0rem;
+        margin-left: 0rem;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(7, 1fr);
+        column-gap: 8rem;
+    }
+
+    .proj1__tech-stack::before {
+        top: 3.4rem;
+        height: 85%;
+    }
+
+    .proj1__tech-stack::after {
+        content: '';
+        height: 85%;
+        width: 6.5rem;
+        background-color: #2C9EDE;
+        position: absolute;
+        right: 15rem;
+        top: 3.4rem;
+        z-index: 1;
+    }
+
+    .proj1__tech-stack__header {
+        grid-column: 1 / -1;
+        grid-row: 1;
+        justify-self: start;
+        margin-top: 0rem;
+        align-self: start;
+    }
+
+    .proj1__tech-stack__item {
+        z-index: 10;
+
+        &::after {
+            bottom: 2.2rem;
+        }
+    }
+
+
+    ///// PROJECT 2
+
+    .proj2 {
+        grid-column: projects-start 3 / projects-start 13;
+        grid-row: 18 / 23;
+    }
+
+    .proj2__title {
+        grid-column: 1;
+        font-size: 2.8rem;
+    }
+
+    .proj2__text {
+        grid-column: 1 / 7;
+        line-height: 2rem;
+        font-size: 1.6rem;
+        margin-top: 10rem;
+    }
+
+    .proj2__tech-stack {
+        grid-column: 5 / 13;
+        grid-row: 23 / 26;
+        margin-top: 0rem;
+        margin-left: 0rem;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(7, 1fr);
+        column-gap: 8rem;
+    }
+
+    .proj2__tech-stack::before {
+        top: 3.4rem;
+        height: 80%;
+        top: 7.4rem;
+    }
+
+    .proj2__tech-stack__header {
+        grid-column: 1 / -1;
+        grid-row: 1;
+        justify-self: start;
+        margin-top: 0rem;
+        align-self: end;
+    }
+
+    .proj2__tech-stack::after {
+        content: '';
+        height: 80%;
+        width: 6.5rem;
+        background-color: #2C9EDE;
+        position: absolute;
+        right: 15rem;
+        top: 7.4rem;
+        z-index: 1;
+    }
+
+    .proj2__tech-stack__item {
+        align-self: end;
+        z-index: 10;
+    }
+
+    ///// PROJECT 3
+
+    .proj3 {
+        grid-column: projects-start 3 / projects-start 13;
+        grid-row: 27 / 31;
+    }
+
+    .proj3__title {
+        grid-column: 1;
+    }
+
+    .proj3__text {
+        grid-column: 1 / 7;
+        grid-row: 5 / 8;
+        line-height: 2rem;
+        font-size: 1.6rem;
+    }
+
+    .proj3__tech-stack__header {
+        grid-column: 1;
+        grid-row: 1;
+        align-self: start;
+    }
+
+    .proj3__tech-stack {
+        grid-column: 5 / 13;
+        grid-row: 32 / 34;
+        margin-top: 0rem;
+        margin-left: 0rem;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(4, 1fr);
+        column-gap: 8rem;
+    }
+    
+    .proj3__tech-stack::before {
+        height: 80%;
+        top: 3.5rem;
+    }
+
+    .proj3__tech-stack::after {
+        content: '';
+        height: 80%;
+        width: 6.5rem;
+        background-color: #2C9EDE;
+        position: absolute;
+        right: 15rem;
+        top: 3.2rem;
+        z-index: 1;
+        grid-column: 2;
+        justify-self: end;
+    }
+
+    .proj3__tech-stack__item {
+        align-self: end;
+        z-index: 10;
+    }
+
+    .proj3__tech-stack__item--1 {
+        grid-row: 2;
+        grid-column: 1;
+        align-self: center;
+    }
+
+    .proj3__tech-stack__item--2 {
+        grid-row: 2;
+        grid-column: 2;
+        align-self: center;
+    }
+
+    .proj3__tech-stack__item--3 {
+        grid-row: 3;
+        grid-column: 1;
+        align-self: center;
+    }
+
+    .proj3__tech-stack__item--4 {
+        grid-row: 3;
+        grid-column: 2;
+        align-self: center;
+    }
+
+
+    ///// SHARED STYLES
+    .portfolio__tech-stack__header,
+    .proj1__tech-stack__header,
+    .proj2__tech-stack__header,
+    .proj3__tech-stack__header {
+        color: #2C9EDE;
+    }
+
+    .portfolio__tech-stack,
+    .proj1__tech-stack,
+    .proj2__tech-stack,
+    .proj3__tech-stack {
+        color: #fff;
+    }
+
+    .portfolio__tech-stack__item::after,
+    .proj1__tech-stack__item::after,
+    .proj2__tech-stack__item::after,
+    .proj3__tech-stack__item::after {
+        left: -3.8rem;
+    }
+
+}
+
+////////////// 835px //////////////
+@media screen and (max-width: 835px){
+    .portfolio__text {
+        grid-column: 1 / 6;
+    }
+
+    .portfolio__title {
+        grid-row: 1;
+        align-self: center;
+        margin-bottom: 0rem;
+        margin-top: 0rem;
+    }
+}
+
+
+////////////// 815px //////////////
+@media screen and (max-width: 815px){
+    .proj1__before__bg,
+    .proj2__before__bg,
+    .proj3__before__bg {
+        margin-left: 0rem;
+    }
+}
+
+
+////////////// 796px //////////////
+@media screen and (max-width: 796px){
+
+    .projects {
+        grid-template-rows: repeat(7, 1fr) 10rem repeat(7, 1fr) 10rem repeat(7, 1fr) 10rem repeat(6, 1fr);
+    }
+    
+
+    .projects__header {
+        font-size: 4.8rem;
+        align-self: center;
+    }
+
+    .portfolio__tech-stack::before,
+    .proj1__tech-stack::before,
+    .proj2__tech-stack::before,
+    .proj3__tech-stack::before,
+    .portfolio__tech-stack__item::after,
+    .proj1__tech-stack__item::after,
+    .proj2__tech-stack__item::after,
+    .proj3__tech-stack__item::after,
+    .proj1__tech-stack::after,
+    .proj2__tech-stack::after,
+    .proj3__tech-stack::after {
+        display: none;
+    }
+
+    .proj1__before__bg, 
+    .proj2__before__bg, 
+    .proj3__before__bg,
+    .proj1__after__bg, 
+    .proj2__after__bg, 
+    .proj3__after__bg {
+        background-color: #2C4057;
+    }
+
+    .proj1__before__header::before, 
+    .proj2__before__header::before, 
+    .proj3__before__header::before,
+    .proj1__after__header::before, 
+    .proj2__after__header::before, 
+    .proj3__after__header::before {
+        display: none;
+    }
+
+    .proj1__before__header, 
+    .proj2__before__header, 
+    .proj3__before__header {
+        font-size: 2.6rem;
+        align-self: center;
+    }
+
+    .proj1__after__header, 
+    .proj2__after__header, 
+    .proj3__after__header {
+        grid-row: 1;
+        grid-column: 11 / 13;
+        margin-bottom: 0rem;
+        font-size: 2.6rem;
+        justify-self: center;
+        align-self: center;
+    }
+
+    .proj1__before__bg,
+    .proj2__before__bg,
+    .proj3__before__bg {
+        grid-column: 1 / 7;
+        grid-row: 2 / 3;
+        width: 100%;
+        height: 100%;
+    }
+
+    .proj1__before__bg__img,
+    .proj2__before__bg__img,
+    .proj3__before__bg__img {
+        grid-column: 1 / 4;
+        grid-row: 1 / 4;
+        margin-left: 0rem;
+        width: 135%;
+        place-self: auto;
+    }
+
+    .proj1__after__bg,
+    .proj2__after__bg,
+    .proj3__after__bg {
+        grid-column: 10 / 15;
+        grid-row: 2 / 3;
+        width: 100%;
+        height: 100%;
+        margin-left: .5rem;
+    }
+
+    .proj1__after__bg__img,
+    .proj2__after__bg__img,
+    .proj3__after__bg__img {
+        grid-column: 1 / 4;
+        grid-row: 1 / 4;
+        width: 160%;
+        justify-self: center;
+        align-self: auto;
+    }
+
+    .proj1__greater-sign, 
+    .proj2__greater-sign, 
+    .proj3__greater-sign {
+        grid-column: 7 / 9;
+        grid-row: 2 / 3;
+        font-size: 5.7rem;
+        align-self: start;
+        justify-self: center;
+        margin-top: 3rem;
+    }
+
+    .proj1__title,
+    .proj2__title,
+    .proj3__title {
+        grid-row: 3;
+        align-self: end;
+    }
+
+    .proj1__text,
+    .proj3__text {
+        grid-column: 1 / -1;
+        grid-row: 4 / 6;
+    }
+
+    .proj1,
+    .proj2,
+    .proj3 {
+        grid-template-rows: repeat(6, 1fr);
+        grid-column: projects-start 2 / projects-start 14;
+    }
+
+    .portfolio {
+        grid-row: 2 / 8;
+    }
+
+    .proj1 {
+        grid-row: 9 / 13;
+    }
+
+    .proj1__tech-stack {
+        grid-row: 13 / 16;
+    }
+
+    .proj2 {
+        grid-row: 16 / 20;
+    }
+
+    .proj2__tech-stack {
+        grid-row: 20 / 23;
+    }
+
+    .proj3 {
+        grid-row: 24 / 28;
+    }
+
+    .proj3__tech-stack {
+        grid-row: 28 / 30;
+    }
+
+    .portfolio__text {
+        grid-column: 1 / 7;
+    }
+
+    .portfolio__bg {
+        height: 70%;
+        width: 70%;
+        grid-column: 6 / 14;
+        grid-row: 1 / 3;
+        align-self: end;
+    }
+
+    .portfolio__title, 
+    .proj1__title, 
+    .proj2__title, 
+    .proj3__title {
+        font-size: 1.9rem;
+        font-weight: 900;
+    }
+
+    .proj1__tech-stack, 
+    .proj2__tech-stack, 
+    .proj3__tech-stack {
+        grid-column: 3 / 11;
+    }
+
+    .proj2__text {
+        margin-top: 3.5rem;
+        grid-column: 1 / -1;
+        grid-row: 4 / 6;
+        align-self: start;
+    }
+}
+
+
+
+////////////// 600px //////////////
+@media screen and (max-width: 600px){
+    
+    .proj1__greater-sign, 
+    .proj2__greater-sign, 
+    .proj3__greater-sign {
+        grid-column: 7 / 9;
+        grid-row: 2 / 3;
+        font-size: 5.7rem;
+        align-self: start;
+        justify-self: center;
+        margin-top: 1rem;
+    }
+}
+
+
+
+////////////// 565px //////////////
+@media screen and (max-width: 565px){
+    .portfolio__bg {
+        height: 90%;
+        width: 70%;
+        grid-column: 3 / 14;
+        grid-row: 1 / 3;
+        align-self: center;
+        justify-self: center;
+    }
+    
+    .portfolio__title {
+        grid-row: 3;
+        align-self: start;
+    }
+    
+    .portfolio__text {
+        grid-row: 3 / 5;
+        grid-column: 1 / -1;
+        align-self: center;
+    }
+
+    .portfolio__tech-stack {
+        grid-column: 6 / 10;
+        grid-row: 5 / 8;
+    }
+
+}
+
+
+/////////////////////////////////////////////////
+/////////////////// DEVICES ////////////////////
+///////////////////////////////////////////////
+
+//<<<<<<<<<<<<<<<<  PORTRAIT  >>>>>>>>>>>>>>>>
+
+    // iPhone Pro Max (926 x 428)
+    // One Plus Nord 9 Pro (919 x 412), One Plus Nord (915 x 412)
+    @media screen and (max-height: 926px) and (max-width: 428px) and (orientation: portrait){
+        .projects__header {
+            font-size: 4.5rem;
+        }
+        
+        .portfolio__bg {
+            height: 80%;
+            width: 90%;
+            grid-column: 3 / 14;
+            grid-row: 1 / 3;
+            align-self: center;
+            justify-self: center;
+        }
+        
+        .portfolio__title {
+            grid-row: 3;
+            align-self: start;
+        }
+        
+
+        .portfolio__tech-stack {
+            grid-column: 6 / 10;
+            grid-row: 5 / 8;
+        }
+
+        .proj2__text {
+            margin-top: 3rem;
+        }
+    }
+
+    // iPhone XS Max (896 x 414),
+    // iPhone XR (896 x 414)
+    @media screen and (max-height: 896px) and (max-width: 414px) and (orientation: portrait) {
+        .projects__header {
+            font-size: 4.5rem;
+        }
+        
+        .portfolio__bg {
+            height: 80%;
+            width: 90%;
+            grid-column: 3 / 14;
+            grid-row: 1 / 3;
+            align-self: center;
+            justify-self: center;
+        }
+        
+        .portfolio__title {
+            grid-row: 3;
+            align-self: start;
+            margin-top: 1rem;
+        }
+        
+        .portfolio__text {
+            grid-row: 3 / 5;
+            grid-column: 1 / -1;
+
+        }
+
+        .portfolio__tech-stack {
+            grid-column: 6 / 10;
+            grid-row: 5 / 8;
+        }
+    }
+
+    // Galaxy Note 9 (846 x 414)
+    @media screen and (max-height: 846px) and (max-width: 414px) and (orientation: portrait) {
+        .portfolio__bg {
+            height: 80%;
+            width: 90%;
+            grid-column: 3 / 14;
+            grid-row: 1 / 3;
+            align-self: center;
+            justify-self: center;
+        }
+        
+        .portfolio__title {
+            grid-row: 3;
+            align-self: start;
+        }
+        
+        .portfolio__text {
+            grid-row: 4;
+            grid-column: 1 / -1;
+            margin-top: -6rem;
+            align-self: start;
+        }
+
+        .portfolio__tech-stack {
+            grid-column: 6 / 10;
+            grid-row: 5 / 8;
+        }
+    }
+
+    // Galaxy S20 (854 x 384),
+    // Galaxy S20 (800 x 360) 
+    @media screen and (max-height: 854px) and (max-width: 384px) and (orientation: portrait){
+        .projects__header {
+            font-size: 4rem;
+        }
+
+        .proj1__greater-sign, 
+        .proj2__greater-sign, 
+        .proj3__greater-sign {
+            margin-top: -.6rem;
+            margin-right: 0rem;
+        }
+
+        .proj1__tech-stack, 
+        .proj2__tech-stack, 
+        .proj3__tech-stack {
+            column-gap: 5rem;
+        }
+
+    }
+
+
+    // Galaxy S9/S9+ (740 x 360)
+    @media screen and (max-height: 740px) and (max-width: 360px) and (orientation: portrait) {
+        .portfolio__bg {
+            height: 90%;
+            width: 100%;
+            grid-column: 3 / 14;
+            grid-row: 1 / 2;
+        }
+    
+        .portfolio__title {
+            grid-row: 2;
+            align-self: start;
+            grid-column: 2 / 5;
+        }
+
+        .portfolio__text {
+            grid-column: 2 / -1;
+            grid-row: 3 / 4;
+        }
+        
+        .portfolio__tech-stack {
+            grid-row: 5 / 8;
+            grid-column: 5 / 9;
+        }
+
+        .proj1__tech-stack,
+        .proj2__tech-stack {
+            column-gap: 6rem;
+        }
+
+        .proj3__tech-stack {
+            column-gap: 4rem;
+        }
+    }
+
+    // Galaxy Note 3 (640 x 360),
+    // Galaxy Note S5 (640 x 360), 
+    // Microsoft Lumia 550/950 (640 x 360)
+    @media screen and (max-height: 640px) and (max-width: 360px) and (orientation: portrait){ 
+        .projects__header {
+            font-size: 5rem;
+        }
+
+        .portfolio__title {
+            grid-column: 1 / 5;
+            grid-row: 2;
+            align-self: center;
+        }
+
+        .portfolio__text {
+            grid-column: 1 / -1;
+            grid-row: 2 / 4;
+            align-self: end;
+        }
+
+        .portfolio__bg {
+            grid-column: 1 / -1;
+            justify-self: center;
+            grid-row: 1;
+            height: 70%;
+            width: 70%;
+        }
+
+        .portfolio__tech-stack {
+            grid-column: 5 / 9;
+        }
+
+        .proj1__tech-stack,
+        .proj2__tech-stack {
+            column-gap: 6rem;
+        }
+
+        .proj3__tech-stack {
+            column-gap: 4rem;
+        }
+
+        .proj1__after__header, 
+        .proj2__after__header, 
+        .proj3__after__header {
+            grid-row: 1;
+            margin-bottom: -1.5rem;
+            align-self: center;
+        }
+
+        .proj1__after__bg__img, 
+        .proj2__after__bg__img, 
+        .proj3__after__bg__img {
+            justify-self: center;
+            align-self: auto;
+        }
+
+    }
+
+
+//<<<<<<<<<<<<<<<<  LANDSCAPE  >>>>>>>>>>>>>>>>
+
+
+
+    // iPhone 12 Pro Max (926 x 428) 
+    @media screen and (max-height: 428px) and (max-width: 926px) and (orientation: landscape) {
+        .projects {
+            grid-row: 5 / 6;
+        }
+
+        .projects__header {
+            font-size: 5rem;
+        }
+
+        .proj1__before__header, 
+        .proj2__before__header, 
+        .proj3__before__header {
+            grid-column: 1 / 4;
+            justify-self: center;
+            margin-left: 1rem;
+        }
+
+        .proj1__after__header, 
+        .proj2__after__header, 
+        .proj3__after__header {
+            grid-row: 2 / 3;
+            grid-column: 9 / 12;
+            justify-self: center;
+        }
+
+        .proj1__before__bg,
+        .proj2__before__bg,
+        .proj3__before__bg {
+            margin-left: 0rem;
+        }
+
+        .proj1__after__bg, 
+        .proj2__after__bg, 
+        .proj3__after__bg {
+            grid-column: 9 / 15;
+            grid-row: 3 / 7;
+        }
+
+        
+        .portfolio__tech-stack::before,
+        .proj1__tech-stack::before,
+        .proj2__tech-stack::before,
+        .proj3__tech-stack::before,
+        .proj1__tech-stack::after,
+        .proj2__tech-stack::after,
+        .proj3__tech-stack::after,
+        .portfolio__tech-stack__item::after,
+        .proj1__tech-stack__item::after,
+        .proj2__tech-stack__item::after,
+        .proj3__tech-stack__item::after {
+            display: none;
+        }
+
+        .proj1__greater-sign, 
+        .proj2__greater-sign, 
+        .proj3__greater-sign {
+            grid-column: 7 / 9;
+            justify-self: start;
+        }
+
+        .portfolio__title {
+            grid-row: 1;
+            align-self: end;
+        }
+
+        .portfolio__text {
+            grid-column: 1 / 7;
+        }
+
+        .portfolio__bg {
+            height: 80%;
+            width: 70%;
+            grid-column: 7 / 14;
+            grid-row: 1 / 4;
+        }
+
+        .portfolio__tech-stack {
+            margin-top: 2rem;
+            grid-row: 4 / 7;
+        }
+
+        .proj1 {
+            grid-row: 9 / 14;
+        }
+
+        .proj1__tech-stack {
+            grid-row: 15 / 18;
+        }
+
+        .proj1__text,
+        .proj2__text,
+        .proj3__text {
+            grid-column: 1 / -1;
+        }
+
+        .proj2__tech-stack {
+            grid-row: 23 / 26;
+            align-self: center;
+        }
+
+        .proj3 {
+            grid-row: 27 / 32;
+        }
+
+        .proj3__tech-stack {
+            grid-row: 32 / 35;
+        }
+    }
+
+
+    // Galaxy Note 9 (846 x 414),
+    // iPhone XR (896 x 414),
+    // iPhone XS Max (896 x 414)
+    @media screen and (max-height: 414px) and (orientation: landscape){
+        .projects {
+            grid-row: 5 / 6;
+        }
+
+        .proj1__before__header, 
+        .proj2__before__header, 
+        .proj3__before__header {
+            grid-column: 1 / 4;
+            justify-self: center;
+            margin-left: 1rem;
+        }
+
+        .proj1__after__header, 
+        .proj2__after__header, 
+        .proj3__after__header {
+            grid-row: 2 / 3;
+            grid-column: 9 / 12;
+            justify-self: center;
+        }
+
+        .proj1__before__bg,
+        .proj2__before__bg,
+        .proj3__before__bg {
+            margin-left: 0rem;
+        }
+
+        .proj1__after__bg, 
+        .proj2__after__bg, 
+        .proj3__after__bg {
+            grid-column: 9 / 15;
+            grid-row: 3 / 7;
+        }
+
+        
+        .portfolio__tech-stack::before,
+        .proj1__tech-stack::before,
+        .proj2__tech-stack::before,
+        .proj3__tech-stack::before,
+        .proj1__tech-stack::after,
+        .proj2__tech-stack::after,
+        .proj3__tech-stack::after,
+        .portfolio__tech-stack__item::after,
+        .proj1__tech-stack__item::after,
+        .proj2__tech-stack__item::after,
+        .proj3__tech-stack__item::after {
+            display: none;
+        }
+
+        .proj1__greater-sign, 
+        .proj2__greater-sign, 
+        .proj3__greater-sign {
+            grid-column: 7 / 9;
+        }
+
+        .portfolio__title {
+            grid-row: 1;
+            align-self: center;
+        }
+
+        .portfolio__bg {
+            height: 80%;
+            width: 70%;
+            grid-column: 7 / 14;
+            grid-row: 1 / 4;
+        }
+
+        .portfolio__tech-stack {
+            margin-top: 2rem;
+            grid-row: 4 / 7;
+        }
+
+        .proj1 {
+            grid-row: 9 / 14;
+        }
+
+        .proj1__tech-stack {
+            grid-row: 14 / 17;
+        }
+
+        .proj1__text,
+        .proj2__text,
+        .proj3__text {
+            grid-column: 1 / -1;
+        }
+
+        .proj2__tech-stack {
+            grid-row: 23 / 26;
+            align-self: center;
+        }
+
+        .proj3 {
+            grid-row: 27 / 32;
+        }
+
+        .proj3__tech-stack {
+            grid-row: 32 / 35;
+        }
+
+    }
+
+    // Galaxy S20 (854 x 384),
+    // Galaxy S20 (800 x 360) 
+    @media screen and (max-height: 854px) and (orientation: landscape){
+        .proj1__before__bg__img,
+        .proj2__before__bg__img,
+        .proj3__before__bg__img {
+            margin-left: 9rem;
+        }
+
+    }
+
+    // iPhone 6/7/8 Plus (736 x 414)
+    @media screen and (max-height: 414px) and (max-width: 736px) and (orientation: landscape){
+        .projects {
+            grid-row: 5 / 6;
+        }
+
+        .portfolio__bg {
+            grid-column: 7 / 15;
+
+        }
+
+        .proj1__before__header, 
+        .proj2__before__header, 
+        .proj3__before__header {
+            grid-column: 2 / 6;
+            justify-self: center;
+        }
+
+        .proj1__after__header, 
+        .proj2__after__header, 
+        .proj3__after__header {
+            grid-column: 10 / 14;
+            grid-row: 1;
+        }
+
+        .proj1__after__bg, 
+        .proj2__after__bg, 
+        .proj3__after__bg {
+            grid-column: 10 / 15;
+            grid-row: 2;
+        }
+
+        .proj1__before__bg__img, 
+        .proj2__before__bg__img, 
+        .proj3__before__bg__img {
+            margin-left: 0rem;
+        }
+
+        .proj1__greater-sign, 
+        .proj2__greater-sign, 
+        .proj3__greater-sign {
+            justify-self: center;
+        }
+
+        .proj1__tech-stack {
+            grid-row: 14 / 17;
+            height: 100%;
+        }
+
+        .proj2 {
+            grid-row: 18 / 23;
+        }
+    }
+
+    // iPhone X/XS (812 x 375)
+    @media screen and (max-height: 375px) and (max-width: 812px) and (orientation: landscape){
+        .projects {
+            grid-row: 5 / 6;
+        }
+
+        .proj1__after__header,
+        .proj2__after__header,
+        .proj3__after__header {
+            grid-row: 2 / 3;
+        }
+
+        .proj1__after__bg,
+        .proj2__after__bg,
+        .proj3__after__bg {
+            grid-row: 3 / 7;
+        }
+
+        .proj2__tech-stack {
+            grid-row: 23 / 26;
+        }
+
+        .proj1__before__header, 
+        .proj2__before__header, 
+        .proj3__before__header {
+            grid-column: 1 / 5;
+        }
+
+        .proj1__after__header, 
+        .proj2__after__header, 
+        .proj3__after__header {
+            grid-column: 9 / 13;
+        }
+
+        .proj1__greater-sign,
+        .proj2__greater-sign,
+        .proj3__greater-sign {
+            margin-right: 1rem;
+        }
+    }
+
+
+    // iPhone 6/7/8 (667 x 375)
+    @media screen and (max-height: 375px) and (max-width: 667px) and (orientation: landscape){
+        .projects {
+            grid-row: 5 / 6;
+        }
+
+        .proj1__before__header, 
+        .proj2__before__header, 
+        .proj3__before__header {
+            grid-column: 2 / 6;
+            justify-self: center;
+        }
+
+        .proj1__after__header, 
+        .proj2__after__header, 
+        .proj3__after__header {
+            grid-column: 10 / 14;
+            grid-row: 1;
+        }
+
+        .proj1__after__bg, 
+        .proj2__after__bg, 
+        .proj3__after__bg {
+            grid-column: 10 / 15;
+            grid-row: 2;
+        }
+
+        .proj1__tech-stack {
+            grid-row: 14 / 17;
+        }
+
+        .proj2__tech-stack {
+            grid-row: 23 / 26;
+        }
+    }
+
+
+    // iPhone 12 mini (780 x 360)
+    // Galaxy S9/S9+ (740 x 360)
+    @media screen and (max-height: 360px) and (max-width: 780px) and (orientation: landscape) {
+        .projects {
+            grid-row: 5 / 6;
+
+            grid-template-rows: repeat(7, 1fr) 15rem repeat(8, 1fr) 15rem repeat(8, 1fr) 15rem repeat(8, 1fr) 15rem;
+        }
+
+        .portfolio {
+            grid-row: 3 / 10;
+        }
+
+        .portfolio__bg {
+            height: 90%;
+            width: 80%;
+            grid-column: 6 / 14;
+            grid-row: 1 / 4;
+            align-self: start;
+        }
+
+        .portfolio__bg__img {
+            width: 180%;
+            height: 130%;
+        }
+
+        .portfolio__title {
+            grid-column: 1 / 5;
+            grid-row: 1;
+            align-self: center;
+        }
+        
+
+        .portfolio__tech-stack {
+            margin-top: 2rem;
+            grid-row: 4 / 7;
+            grid-column: 6 / 10;
+        }
+
+        .proj1 {
+            grid-row: 10 / 15;
+
+            &__text {
+                grid-row: 5 / 7;
+            }
+
+            &__tech-stack {
+                grid-row: 16 / 18;
+            }
+        }
+
+        .proj2 {
+            grid-row: 19 / 23;
+
+            &__tech-stack {
+                grid-row: 25 / 27;
+            }
+        }
+
+        .proj3 {
+            grid-row: 28 / 33;
+
+            &__tech-stack {
+                grid-row: 34 / 35;
+
+                &__item--1 {
+                    padding-bottom: .9rem;
+                }
+            }
+            
+        }
+
+        .proj1__after__bg, 
+        .proj2__after__bg, 
+        .proj3__after__bg {
+            grid-column: 10 / 15;
+        }
+
+        .proj1__before__bg__img, 
+        .proj2__before__bg__img, 
+        .proj3__before__bg__img {
+            margin-left: 0rem;
+        }
+
+        .proj1__title,
+        .proj2__title,
+        .proj3__title {
+            grid-row: 3;
+            align-self: start;
+        }
+
+        .proj2__text,
+        .proj3__text {
+            grid-row: 4 / 6;
+            align-self: start;
+            grid-column: 1 / -1;
+        }
+
+        .proj1__before__header, 
+        .proj2__before__header, 
+        .proj3__before__header {
+            grid-column: 2 / 6;
+        }
+
+        .proj1__after__header,
+        .proj2__after__header,
+        .proj3__after__header {
+            grid-row: 1;
+            grid-column: 10 / 14;
+        }
+
+        .proj1__after__bg,
+        .proj2__after__bg,
+        .proj3__after__bg {
+            grid-row: 2 / 3;
+        }
+        
+        .proj1__before__header,
+        .proj1__after__header,
+        .proj2__before__header,
+        .proj2__after__header,
+        .proj3__before__header,
+        .proj3__after__header {
+            font-size: 3rem;
+        }
+
+        .proj1__greater-sign, 
+        .proj2__greater-sign, 
+        .proj3__greater-sign {
+            grid-column: 7 / 9;
+            font-size: 7rem;
+            align-self: start;
+            justify-self: center;
+            grid-row: 2;
+            margin-right: 0rem;
+        }
+
+    }
+
+
+    // Galaxy Note 3 (640 x 360),
+    // Galaxy Note S5 (640 x 360), 
+    // Microsoft Lumia 550/950 (640 x 360)
+
+    @media screen and (max-height: 360px) and (max-width: 640px) and (orientation: landscape){
+        .projects {
+            grid-row: 5 / 6;
+        }
+
+        .projects__header {
+            font-size: 4.5rem;
+        }
+
+        .portfolio__title {
+            align-self: center;
+        }
+
+        .portfolio__tech-stack {
+            grid-column: 6 / 10;
+        }
+
+        .proj1__before__header,
+        .proj1__after__header {
+            margin-bottom: .5rem;
+        }
+
+        .proj1__tech-stack {
+            grid-row: 14 / 16;
+        }
+
+        .proj2__before__header,
+        .proj2__after__header {
+            margin-bottom: .5rem;
+        }
+
+        .proj2__title {
+            margin-bottom: 2rem;
+        }
+
+        .proj2__text {
+            grid-column: 1 / -1;
+            margin-top: 0rem;
+        }
+
+        .proj2__tech-stack {
+            grid-row: 22 / 24;
+        }
+
+        .proj3__before__header,
+        .proj3__after__header {
+            margin-bottom: .5rem;
+        }
+
+        .proj1__after__header, 
+        .proj2__after__header, 
+        .proj3__after__header {
+            grid-row: 1;
+        }
+
+        .proj1__after__bg, 
+        .proj2__after__bg, 
+        .proj3__after__bg {
+            grid-column: 10 / 15;
+            grid-row: 2 / 3;
+        }
+
+        .proj3 {
+            grid-row: 25 / 30;
+        }
+
+        .proj3__text {
+            margin-top: 0rem;
+        }
+
+        .proj3__tech-stack {
+            grid-row: 30 / 31;
+        }
+    }
+
+
+    // iPhone 5/SE (568 x 320)
+    @media screen and (max-height: 320px) and (orientation: landscape){
+        .projects {
+            grid-row: 5 / 6;
+        }
+
+        .portfolio__bg {
+            height: 80%;
+            width: 100%;
+            grid-column: 8 / -1;
+        }
+    }
+
+    // LG Optimus L70 (640 x 384)
+    @media screen and (max-height: 384px) and (orientation: landscape){
+        .projects {
+            grid-row: 5 / 6;
+        }
+    }
+
+
+    // Nexus 5X & 6P (732 x 412)
+    @media screen and (max-height: 412px) and (orientation: landscape){
+        .projects {
+            grid-row: 5 / 6;
+        }
+    }

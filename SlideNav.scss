@@ -1,0 +1,153 @@
+.slideNav {
+    display: grid;
+    grid-template-rows: repeat(8, 7rem);
+    grid-template-columns: repeat(3, 1fr);
+    background-color: #fff;
+    opacity: 1;
+    border-radius: .2rem;
+    width: 100%;
+    height: 100%;
+    border-radius: .2rem;
+    position: fixed;
+    top: 0;
+    z-index: 600; 
+
+
+    &__item {
+        text-decoration: none;
+        text-transform: uppercase;
+        color: #000;
+        font-weight: 400;
+        font-size: 2.2rem;
+        transition: all .25s linear; 
+        -o-transition: all .25s linear; 
+        -moz-transition: all .25s linear; 
+        -webkit-transition: all .25s linear;
+
+        &--1 {
+            grid-row: 3;
+            grid-column: 2;
+            justify-self: center;
+            align-self: center;
+            cursor: pointer;
+            position: relative;
+        }
+
+        &--2 {
+            grid-row: 4;
+            grid-column: 2;
+            place-self: center;
+            cursor: pointer;
+        }
+
+        &--3 {
+            grid-row: 5;
+            grid-column: 2;
+            place-self: center;
+            cursor: pointer;
+        }
+    }
+
+    &__logo--1 {
+        grid-row: 6;
+        grid-column: 2;
+        display: grid;
+    }
+
+    &__logo--2 {
+        grid-row: 7;
+        grid-column: 2;
+        display: grid;
+    }
+
+    &__img--1 {
+        width: 20%;
+        place-self: center;
+    }
+
+    &__img--2 {
+        width: 20%;
+        place-self: center;
+    }
+        
+}
+
+
+
+
+
+
+///////////////////////////////////////////////////
+//////////////////// DEVICES /////////////////////
+/////////////////////////////////////////////////
+
+
+//<<<<<<<<<<<<<<<<  PORTRAIT  >>>>>>>>>>>>>>>>
+
+
+
+// iPhone Pro Max (926 x 428)
+// One Plus Nord 9 Pro (919 x 412), One Plus Nord (915 x 412)
+@media screen and (max-height: 926px) and (max-width: 428px) and (orientation: portrait){
+    .slideNav__img--1,
+    .slideNav__img--2 {
+        width: 35%;
+    }
+}
+
+
+
+///// Galaxy Note 9 (846 x 414),
+///// iPhone XR (896 x 414),
+///// iPhone XS Max (896 x 414),
+///// iPhone 6/7/8 Plus (736 x 414)
+@media screen and (max-height: 896px) and (orientation: portrait) {
+
+    .slideNav__img--1,
+    .slideNav__img--2 {
+        width: 35%;
+    }
+
+}
+
+
+
+//<<<<<<<<<<<<<<<<  LANDSCAPE  >>>>>>>>>>>>>>>>
+
+
+
+// iPhone Pro Max (926 x 428)
+// One Plus Nord 9 Pro (919 x 412), One Plus Nord (915 x 412)
+@media screen and (max-height: 428px) and (orientation: landscape){
+    .slideNav {
+        grid-template-rows: repeat(8, 1fr);
+    }
+}
+
+
+
+///// Galaxy Note 9 (846 x 414),
+///// iPhone XR (896 x 414),
+///// iPhone XS Max (896 x 414),
+///// iPhone 6/7/8 Plus (736 x 414)
+@media screen and (max-height: 414px) and (orientation: landscape) {
+    .slideNav {
+        grid-template-rows: repeat(8, 1fr);
+    }
+
+    .slideNav__img--1,
+    .slideNav__img--2 {
+        width: 32%;
+    }
+
+}
+
+
+///// iPhone 6/7/8 (667 x 375)
+@media screen and (max-height: 375px) and (orientation: landscape) {
+    .slideNav__img--1,
+    .slideNav__img--2 {
+        width: 32%;
+    }
+
+}
